@@ -1,5 +1,22 @@
 [
   {
+    "id": 1783053000922,
+    "title": "text_bounce",
+    "tags": [
+      "통통튀는모션",
+      "텍스트",
+      "루프",
+      "css"
+    ],
+    "prompt": "",
+    "memo": "",
+    "type": "iframe",
+    "code": "<!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Text Bounce</title>\n<style>\n  * { margin: 0; padding: 0; box-sizing: border-box; }\n  body {\n    width: 100vw;\n    height: 100vh;\n    background: transparent;\n    overflow: hidden;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;\n  }\n\n  .kidsTxtAnime {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n  }\n\n  .letter {\n    display: inline-block;\n    font-size: clamp(32px, 6vw, 72px);\n    font-weight: 900;\n    color: #1A1A1A;\n    position: relative;\n    line-height: 1;\n  }\n\n  @keyframes bounce {\n    0%   { transform: translateY(0); }\n    25%  { transform: translateY(-20px); }\n    50%  { transform: translateY(0); }\n    75%  { transform: translateY(-10px); }\n    100% { transform: translateY(0); }\n  }\n</style>\n</head>\n<body>\n<div class=\"kidsTxtAnime\" id=\"textWrap\">\n  <span class=\"letter\" data-letter=\"S\">S</span>\n  <span class=\"letter\" data-letter=\"T\">T</span>\n  <span class=\"letter\" data-letter=\"A\">A</span>\n  <span class=\"letter\" data-letter=\"R\">R</span>\n  <span class=\"letter\" data-letter=\"F\">F</span>\n  <span class=\"letter\" data-letter=\"I\">I</span>\n  <span class=\"letter\" data-letter=\"E\">E</span>\n  <span class=\"letter\" data-letter=\"L\">L</span>\n  <span class=\"letter\" data-letter=\"D\">D</span>\n</div>\n\n<script>\n(function() {\n  var bounceDelay = 0.1;\n  var bounceRepeatDelay = 5.0;\n  var letters = document.querySelectorAll('.kidsTxtAnime .letter');\n  var style = document.createElement('style');\n  var css = '';\n\n  letters.forEach(function(el, i) {\n    var nth = i + 1;\n    var d0 = i * bounceDelay;\n    var d1 = d0 + 0.4 + bounceRepeatDelay;\n    var d2 = d1 + 0.4 + bounceRepeatDelay;\n    var d3 = d2 + 0.4 + bounceRepeatDelay;\n    var d4 = d3 + 0.4 + bounceRepeatDelay;\n    css += '.kidsTxtAnime .letter:nth-child(' + nth + '){';\n    css += 'animation: bounce 0.4s ease-in-out 1 forwards,';\n    css += 'bounce 0.4s ease-in-out 1 forwards,';\n    css += 'bounce 0.4s ease-in-out 1 forwards,';\n    css += 'bounce 0.4s ease-in-out 1 forwards,';\n    css += 'bounce 0.4s ease-in-out 1 forwards;';\n    css += 'animation-delay:' + d0 + 's,' + d1 + 's,' + d2 + 's,' + d3 + 's,' + d4 + 's;}';\n  });\n\n  style.textContent = css;\n  document.head.appendChild(style);\n})();\n</script>\n</body>\n</html>\n",
+    "thumbX": 0,
+    "thumbY": 0,
+    "createdAt": 1783053000922
+  },
+  {
     "id": 1783052948182,
     "title": "waterdrop",
     "tags": [
